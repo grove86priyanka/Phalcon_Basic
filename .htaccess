@@ -1,0 +1,18 @@
+#Devertu v2.0
+php_value upload_max_filesize 30M
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+
+    # DirectorySlash off
+    RewriteOptions AllowNoSlash
+
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteCond %{REQUEST_URI} !(.*)/$
+    RewriteCond %{HTTP:X-Forwarded-Proto} https
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI}/ [L,R=301]
+
+    RewriteCond %{REQUEST_FILENAME} !-f [OR]
+    RewriteCond %{REQUEST_FILENAME} !-d [OR]
+    RewriteRule  ^$ public/    [L]
+    RewriteRule  (.*) public/$1 [L]
+</IfModule>

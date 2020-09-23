@@ -1,0 +1,35 @@
+<?php $isOnline = (@$this->admin && $this->admin->isOnline());?>
+<div id="main-wrapper">
+    <?php 
+    	if ($isOnline) {
+			$this->partial('back/header'); 
+	?>
+	    <aside class="left-sidebar">
+	        <div class="scroll-sidebar">
+	    		<?php echo $this->nav->getAccountMenu(); ?>
+	        </div>
+	    </aside>
+        <div class="page-wrapper">
+            <div class="container-fluid">
+                <div class="row page-titles">
+                    <ol class="breadcrumb">
+                        <?php $this->breadcrumbs->output(); ?>
+                    </ol>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <?php App\Helper\Utility::flashMessage(); ?>
+                                <?php echo $this->getContent(); ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <?php if ($isOnline) $this->partial('back/footer'); ?>
+	<?php } else {
+        echo $this->getContent();
+    } ?>
+</div>

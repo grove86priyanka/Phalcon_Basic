@@ -1,0 +1,7 @@
+<div class="wrap">
+    <div id="loadingDiv" class="loadingDiv" style="display:none;"></div>
+    <?php $this->partial('front/header'); ?>
+    <?php App\Helper\Utility::flashMessage(); ?>
+    <?php echo $this->getContent(); ?>
+    <?php $this->partial('front/footer'); ?>
+</div>

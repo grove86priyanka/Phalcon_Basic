@@ -1,0 +1,52 @@
+<header>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	  	<a class="navbar-brand" href="<?php echo $this->url->get('/')?>">Grove86</a>
+	  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	    	<span class="navbar-toggler-icon"></span>
+	  	</button>
+
+	  	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+	    	<ul class="navbar-nav mr-auto">
+		      	<li class="nav-item active">
+		        	<a class="nav-link" href="<?php echo $this->url->get('/')?>">Home</a>
+		      	</li>
+		      	<li class="nav-item">
+	        		<a class="nav-link" href="<?php echo $this->url->get('/page')?>">Page</a>
+		      	</li>
+		      	<?php
+		      		if($this->user->isOnline()) {
+	  			?>
+		      	<li class="nav-item">
+	        		<a class="nav-link" href="<?php echo $this->url->get('/user/')?>">My Account</a>
+		      	</li>
+		      	<?php
+		      		}
+		      		else {
+	  			?>
+
+		      	<li class="nav-item">
+	        		<a class="nav-link" href="<?php echo $this->url->get('/user/login')?>">Login</a>
+		      	</li>
+		      	<li class="nav-item">
+	        		<a class="nav-link" href="<?php echo $this->url->get('/user/register')?>">Sign Up</a>
+		      	</li>
+	  			<?php
+		      		}
+		      	?>
+	      	</ul>
+	      	<?php
+	      		if($this->user->isOnline()) {
+  			?>
+	      	<ul class="navbar-nav my-lg-0">
+	        	<li class="nav-item dropdown">
+	        		<?php echo $this->tag->form(array("/user/logout", "method" => "post")); ?>
+                    <?php echo $this->tag->submitButton(array('Logout', 'class' => 'btn btn-danger')); ?>
+                    <?php echo $this->tag->endForm(); ?>
+	            </li>
+	        </ul>
+	      	<?php
+	      		}
+  			?>
+	  	</div>
+	</nav>
+</header>

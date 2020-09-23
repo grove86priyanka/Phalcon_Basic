@@ -1,0 +1,21 @@
+<div class="page-header">
+    <h1>User Login</h1>
+</div>
+<div class="col-lg-4">
+    <form id="login-form" class="form-horizontal" method="post">
+        <fieldset>
+            <?php $form->renderField('username'); ?>
+            <?php $form->renderField('password'); ?>                
+            <div class="form-group">
+                <div class="col-sm-offset-3 col-sm-8">
+                    <?php echo $this->tag->linkTo(array('/user/requestsetup', 'Forgotten password? Reset now.', 'class' => 'btn btn-link btn-block')); ?>
+                    <?php echo $form->render('login'); ?>
+                    <?php echo $this->tag->linkTo(array('/user/register', 'Register Now', 'class' => '')); ?>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</div>
+<div class="clearfix"></div>
+
+

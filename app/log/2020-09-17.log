@@ -1,0 +1,3 @@
+[09:57:28][ERROR] Exception: SQLSTATE[HY000] [1049] Unknown database 'demo', /demo/admin
+[10:05:39][ERROR] Exception: SQLSTATE[HY000] [1049] Unknown database 'demo', /demo/admin
+[10:06:06][ERROR] Exception: SQLSTATE[HY000] [1049] Unknown database 'demo', /demo/admin

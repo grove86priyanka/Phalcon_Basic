@@ -1,0 +1,21 @@
+<div class="page-header">
+    <h1>User Registration</h1>
+</div>
+<form method="post"  id="register-form" class="">
+    <div class="row">
+        <div class="col-6">
+            <?php $form->renderField('first_name'); ?>
+            <?php $form->renderField('last_name'); ?>
+            <?php $form->renderField('email'); ?>
+            <?php $form->renderField('passwordTxt'); ?>
+            <?php $form->renderField('repeatPassword'); ?>
+        </div>
+        <div class="col-6"></div>
+        <div class="button-group text-center col-6">
+            <?php $form->renderField('submit'); ?>
+        </div>
+        <div class="col-6"></div>
+    </div>
+</form>
+
+

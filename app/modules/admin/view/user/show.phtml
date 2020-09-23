@@ -1,0 +1,65 @@
+<div class="row">
+    <div class="col-12">
+        <div class="button-group pull-right">
+            <a href="<?php echo $this->url->getBackend('new');?>" class="btn btn-info">Add User</a>
+        </div>
+    </div>
+</div>
+<form id="user-form-filter" >
+    <div class="row">
+        <div class="col-12">
+            <?php $searchForm->renderField('keywords'); ?>
+            <?php $searchForm->renderField('status'); ?>
+            <?php $searchForm->renderField('submit'); ?>
+        </div>
+        <div class="col-12">
+            <?php echo $pager->getResultsLabelHTML();?> | <?php echo $searchForm->renderField('per_page_item'); ?>
+        </div>
+    </div>
+</form>
+
+<div class="table-responsive">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th><?php echo $sort->getHtml('ID', 'user_id') ?></th>
+                <th><?php echo $sort->getHtml('Name', 'user_name') ?></th>
+                <th><?php echo $sort->getHtml('Email', 'user_email') ?></th>
+                <th><?php echo $sort->getHtml('State', 'user_state') ?></th>
+                <th><?php echo $sort->getHtml('Status', 'user_status') ?></th>
+                <th class="text-nowrap">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+                if ($users && count($users) > 0) {
+                    foreach ($users as $user) { 
+            ?>
+            <tr>
+                <td><?php echo $user->getId();?></td>  
+                <td><?php echo $user->getFullName();?></td>  
+                <td><?php echo $user->getEmail();?></td>   
+                <td><?php echo $user->getState();?></td>  
+                <td><?php echo $user->getStatusText();?></td>  
+                <td class="text-nowrap">
+                    <a href="<?php echo $this->url->getBackend('edit', $user->getId());?>" data-toggle="tooltip" data-original-title="Edit"> <i class="fa fa-pencil text-inverse m-r-10"></i> </a>
+                    <a data-toggle="tooltip" class="delete_user" onclick="confirmRedirect('<?php echo $this->url->getBackend('delete', $user->getId());?>');" data-original-title="Close"> <i class="fa fa-close text-danger"></i> </a>
+                </td>  
+            </tr>
+            <?php
+                    }
+                }
+                else {
+            ?>
+            <tr><td colspan="6" class="text-center">No Users Found!!</td></tr>
+            <?php
+                }
+            ?>
+        </tbody>
+    </table>
+</div>
+<div class="row">
+    <div class="col-12">
+        <div id="ajax-pagi" class="text-center"><?php echo $pager->getLinks(); ?></div>
+    </div>
+</div>

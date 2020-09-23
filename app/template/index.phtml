@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="shortcut icon" href="<?php echo $this->url->getStatic()."/img/"; ?>favicon.ico">
+        <?php echo $this->tag->getTitle(); ?>
+        <?php $this->assets->outputCss('header_css'); ?>
+        <?php $this->assets->outputInlineCss('header_css'); ?>
+        <script type="text/javascript">
+            var setting = {baseUri: "<?php echo $this->url->getBaseUri(); ?>", staticUri: "<?php echo $this->url->getStatic(); ?>"};
+        </script>
+        <?php $this->assets->outputJs('header_js'); ?>
+        <?php $this->assets->outputInlineJs('header_js'); ?>
+    </head>
+    <body>
+        <?php echo $this->getContent(); ?>
+    </body>
+</html>

@@ -1,0 +1,13 @@
+<?php
+	$isOnline = (@$this->admin && $this->admin->isOnline());
+?>
+<footer class="footer">
+    Copyright © <?php echo date('Y');?> Grove86 Inc. All rights reserved.
+</footer>
+<script type="text/javascript">
+	$(document).ready(function(e){
+		<?php if($isOnline) {?>
+			$('#sidebarnav').metisMenu();
+		<?php } ?>
+	});
+</script>

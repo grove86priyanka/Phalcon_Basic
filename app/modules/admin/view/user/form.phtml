@@ -1,0 +1,28 @@
+<?php
+	$action = $form->getFormOptions('action');
+?>
+<div class="row">
+	<div class="col-12">
+	    <h2><?php echo ($action == 'create' ? 'Add New' : 'Edit') ?> User</h2>
+	</div>
+</div>
+<form method="post" action="<?php echo $form->getAction(); ?>" id="register-form" class="">
+	<div class="row">
+		<div class="col-sm-6 col-xs-12">
+			<?php $form->renderField('first_name'); ?>
+			<?php $form->renderField('last_name'); ?>
+			<?php $form->renderField('state'); ?>
+			<?php $form->renderField('status'); ?>
+
+		</div>
+		<div class="col-sm-6 col-xs-12">
+			<?php $form->renderField('email'); ?>
+			<?php $form->renderField('passwordTxt'); ?>
+			<?php $form->renderField('repeatPassword'); ?>
+		</div>
+		<div class="button-group text-center col-12">
+			<?php $form->renderField('submit'); ?>
+			<?php $form->renderField('cancel'); ?>
+		</div>
+	</div>
+</form>

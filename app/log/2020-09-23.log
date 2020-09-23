@@ -1,0 +1,11 @@
+[01:38:43][ERROR] Exception: App\Modules\Front\Controller\CssController handler class cannot be loaded, /demo//public/css/font.css
+[01:42:19][ERROR] Exception: App\Modules\Admin\Controller\TestController handler class cannot be loaded, /demo//admin/test/
+[01:43:44][ERROR] Exception: App\Modules\Admin\Controller\TestController handler class cannot be loaded, /demo//admin/test/
+[01:47:54][ERROR] Exception: App\Modules\Admin\Controller\TestController handler class cannot be loaded, /demo//admin/test/
+[01:49:20][ERROR] Exception: App\Modules\Admin\Controller\TestController handler class cannot be loaded, /demo//admin/test/
+[01:54:05][ERROR] Exception: App\Modules\Admin\Controller\TestController handler class cannot be loaded, /demo//admin/test/
+[01:54:07][ERROR] Exception: App\Modules\Admin\Controller\TestController handler class cannot be loaded, /demo//admin/test/
+[01:57:41][ERROR] Exception: App\Modules\Admin\Controller\TestController handler class cannot be loaded, /demo//admin/test/
+[02:16:22][INFO] Test Created
+[02:16:50][INFO] Test Deleted
+[04:41:13][ERROR] Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'test.test_id_' in 'order clause', /demo//admin/test/

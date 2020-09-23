@@ -1,0 +1,7 @@
+[00:27:00][ERROR] Exception: App\Modules\Front\Controller\CssController handler class cannot be loaded, /demo//public/css/font.css
+[00:30:39][ERROR] Exception: App\Modules\Front\Controller\FrontController handler class cannot be loaded, /demo/front
+[05:28:28][INFO] User Created
+[05:41:01][ERROR] Exception: Table 'user' doesn't exist in database when dumping meta-data for App\Model\User, /demo//admin/user
+[05:42:44][ERROR] Exception: Table 'user' doesn't exist in database when dumping meta-data for App\Model\User, /demo//admin/user
+[05:42:45][ERROR] Exception: Table 'user' doesn't exist in database when dumping meta-data for App\Model\User, /demo//admin/user
+[05:42:45][ERROR] Exception: Table 'user' doesn't exist in database when dumping meta-data for App\Model\User, /demo//admin/user

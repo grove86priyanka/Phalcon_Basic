@@ -1,0 +1,4 @@
+[08:47:27][ERROR] Exception: App\Modules\Front\Controller\CssController handler class cannot be loaded, /demo/public/css/font.css
+[09:55:57][ERROR] Exception: App\Modules\Front\Controller\CssController handler class cannot be loaded, /demo/public/css/font.css
+[10:08:30][ERROR] Exception: App\Modules\Front\Controller\FrontController handler class cannot be loaded, /demo/front
+[10:08:39][ERROR] Exception: App\Modules\Front\Controller\CssController handler class cannot be loaded, /demo/public/css/font.css
